@@ -1,0 +1,69 @@
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+
+.app-header {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+.app-logo {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.nav-links {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links ul li {
+  margin: 0 15px;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.language-toggle {
+  padding-right: 10px;
+}
+
+.language-button {
+  height: 30px;
+  cursor: pointer;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#ffffff;
+}
+
+/* Word Cloud Styling */
+.wordcloud-container {
+  width: 100%;
+  height: calc(100vh - 80px); /* Adjust based on header height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#ffffff;
+}

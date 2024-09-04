@@ -1,0 +1,100 @@
+.admin-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+    background-color: #333;
+    color: white;
+}
+
+.admin-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #ffcccc; /* Light red hover effect */
+    cursor: pointer;
+}
+
+.admin-table-row {
+    transition: background-color 0.3s ease;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.class-input {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px; /* Increased width to accommodate all elements */
+    margin: 0 auto;
+}
+
+.class-input .time-row,
+.class-input .date-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.class-input .time-row .MuiTextField-root,
+.class-input .date-row .MuiTextField-root {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.class-input .time-row .MuiTextField-root:last-child,
+.class-input .date-row .MuiTextField-root:last-child {
+    margin-right: 0;
+}
+
+.form-group-horizontal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.levels-title,
+.days-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.add-dance-class {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container .MuiButton-root {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: none;
+}
+
+.button-container .MuiButton-root:hover {
+    background-color: #555;
+}

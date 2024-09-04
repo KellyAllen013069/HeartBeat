@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hbclient-dev-d9e5c-authRole",
+      "UnauthRoleArn": "arn:aws:iam::549216128937:role/amplify-hbclient-dev-d9e5c-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::549216128937:role/amplify-hbclient-dev-d9e5c-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hbclient-dev-d9e5c-deployment",
+      "UnauthRoleName": "amplify-hbclient-dev-d9e5c-unauthRole",
+      "StackName": "amplify-hbclient-dev-d9e5c",
+      "StackId": "arn:aws:cloudformation:us-east-1:549216128937:stack/amplify-hbclient-dev-d9e5c/ca577c20-66cb-11ef-90a1-0affd19a1bff",
+      "AmplifyAppId": "d1obwshqusi2a6"
+    },
+    "categories": {
+      "auth": {
+        "hbclientresource1": {}
+      }
+    }
+  }
+}
