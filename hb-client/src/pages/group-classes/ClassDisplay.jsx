@@ -6,8 +6,8 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Grid from '@mui/material/Grid';
 import { formatCurrency } from '../../utilities/formatter';
-import { useNavigate } from 'react-router-dom';
-import AddToCart from '../add-to-cart/AddToCart'; // Import the AddToCart component
+import { useCart } from '../../contexts/CartContext'; // Assuming you have a CartContext
+import AddToCart from '../add-to-cart/AddToCart';
 import './classes.css';
 
 export const ClassDisplay = () => {
@@ -17,7 +17,7 @@ export const ClassDisplay = () => {
     const [isCartOpen, setCartOpen] = useState(false); // State for controlling modal visibility
     const [selectedClass, setSelectedClass] = useState(null); // State to store selected class data
     const [selectedDay, setSelectedDay] = useState(''); // State to store selected day
-    const navigate = useNavigate();
+    const { addToCart, cart } = useCart(); // Use cart context
 
     useEffect(() => {
         fetchClasses(selectedMonth, selectedYear);
@@ -64,6 +64,21 @@ export const ClassDisplay = () => {
     };
 
     const handleCloseCart = () => {
+        setCartOpen(false);
+    };
+
+    const handleAddToCartConfirm = (classItem, day, month) => {
+        const newCartItem = {
+            classId: classItem.id,
+            className: classItem.name,
+            day: day,
+            dates: [new Date(2024, month - 1).toISOString()],
+            description: classItem.description,
+            price: classItem.price,
+            monthlyEligible: classItem.monthlyEligible
+        };
+
+        addToCart(newCartItem);
         setCartOpen(false);
     };
 
@@ -114,9 +129,10 @@ export const ClassDisplay = () => {
                             <span>{day}</span>
                             <span className="line"></span>
                         </div>
-                        {classes.map((classItem) => (
-                            <div key={classItem.id} className="class-item">
-                                <div className="class-display-item class-name-time">
+                        {classes.map((classItem, index) => (
+                            <div key={`${classItem.id}-${day}-${index}`} className="class-item">
+
+                            <div className="class-display-item class-name-time">
                                     <span className="class-name">
                                         {classItem.name}
                                     </span>
@@ -157,10 +173,10 @@ export const ClassDisplay = () => {
                 <AddToCart
                     open={isCartOpen}
                     onClose={handleCloseCart}
-                    type="class"
                     day={selectedDay}
                     month={selectedMonth}
                     classItem={selectedClass}
+                    onAddToCart={handleAddToCartConfirm}
                 />
             )}
         </div>

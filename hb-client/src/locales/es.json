@@ -1,0 +1,9 @@
+{
+  "add_to_cart": "Agregar al Carrito",
+  "cart": "Carrito",
+  "total": "Total",
+  "checkout": "Pagar",
+  "must_log_in": "Debes iniciar sesión para agregar artículos al carrito.",
+  "login": "Iniciar Sesión/Registrarse",
+  "sign_out": "Cerrar sesión"
+}

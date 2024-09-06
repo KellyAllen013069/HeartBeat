@@ -1,0 +1,9 @@
+{
+  "add_to_cart": "Add to Cart",
+  "cart": "Cart",
+  "total": "Total",
+  "checkout": "Checkout",
+  "must_log_in": "You must be logged in to add items to the cart.",
+  "login": "Login/Register",
+  "sign_out": "Sign Out"
+}
